@@ -5,15 +5,17 @@ const ToDoList=()=>{
         {text:"react", important:true},
         {text:"QA", important:true},
         {text:"PM", important:false},
-        {text:"Js", important:false}
+        {text:"Js", important:false},
+        {text:"Node", important:true},
     ]
+
+    const data=items.map(({text, important})=>{
+        return (<Lists text={text} important={important}/>)
+    })
 
     return (
         <ul>
-            <Lists text={items[0].text} important={items[0].important}/>
-            <Lists text={items[1].text} important={items[1].important}/>
-            <Lists text={items[2].text} important={items[2].important}/>
-            <Lists text={items[3].text} important={items[3].important}/>
+            {data}
         </ul>
     )
 }
