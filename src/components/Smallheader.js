@@ -1,10 +1,6 @@
 const Smallheader=()=>{
     return (
-        <div>
-            <small>
-                Last update: 23.04.26, 21:06
-            </small>
-        </div>
+        <time dateTime="2023-07-12">Last Updat: yesterday</time>
     )
 }
 

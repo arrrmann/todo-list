@@ -1,8 +1,10 @@
+import Lists from "./Lists"
+
 const ToDoList=()=>{
     return (
         <ul>
-            <li>React Js</li>
-            <li>Product Managment</li>
+            <Lists/>
+            <Lists/>
         </ul>
     )
 }
