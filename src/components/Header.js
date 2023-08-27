@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <div className="test">
             <h1>ToDo App</h1>
-            <Smallheader />
+            <Smallheader text="Last Updat: yesterday"/>
         </div>
     )
 }

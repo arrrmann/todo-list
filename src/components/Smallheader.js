@@ -1,6 +1,6 @@
-const Smallheader=()=>{
+const Smallheader=({text})=>{
     return (
-        <time dateTime="2023-07-12">Last Updat: yesterday</time>
+        <time dateTime="2023-07-12">{text}</time>
     )
 }
 
