@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import Header from "./components/Header"
 import Search from "./components/Search"
 import ToDoList from "./components/ToDoList"
-import User from "./components/User";
+import Users from "./components/Users";
 
 const App = () => {
     const users = [
@@ -14,16 +14,12 @@ const App = () => {
         { name: 'Ann', age: 24, status: true },
     ]
 
-    const user=users.map(({name, age, status})=>{
-        return (<User name={name} age={age} status={status}/>)
-    })
-
     return (
         <div>
             <Header />
             <Search />
             <ToDoList />
-            {user}
+            <Users users={users}/>
         </div>
     )
 }

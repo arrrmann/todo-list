@@ -1,4 +1,4 @@
-import Lists from "./Lists"
+import TodoListItem from "./TodoListItem"
 
 const ToDoList=()=>{
     const items=[
@@ -10,7 +10,7 @@ const ToDoList=()=>{
     ]
 
     const data=items.map(({text, important})=>{
-        return (<Lists text={text} important={important}/>)
+        return (<TodoListItem text={text} important={important}/>)
     })
 
     return (

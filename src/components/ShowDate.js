@@ -1,7 +1,7 @@
-const Smallheader=({text})=>{
+const ShowDate=({text})=>{
     return (
         <time dateTime="2023-07-12">{text}</time>
     )
 }
 
-export default Smallheader
+export default ShowDate
