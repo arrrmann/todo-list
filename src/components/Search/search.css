@@ -1,0 +1,23 @@
+.search input{
+    margin: 5px;
+    outline: none;
+    padding: 5px 5px 5px 15px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(55, 55, 118)
+}
+
+.search button{
+    padding: 6px;
+    background-color: rgb(55, 55, 118);
+    outline: none;
+    margin-left: 15px;
+    color: rgb(255, 255, 255);
+    border: none;
+}
+
+.search button:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(55, 55, 118);
+    cursor: pointer;
+    border: 1px solid rgb(55, 55, 118);
+}

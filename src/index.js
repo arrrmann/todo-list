@@ -1,25 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Header from "./components/Header"
-import Search from "./components/Search"
-import ToDoList from "./components/ToDoList"
-import Users from "./components/Users";
+import Header from "./components/Header/Header"
+import Search from "./components/Search/Search"
+import ToDoList from "./components/ToDoList/ToDoList"
+import AddItem from "./components/AddItem/AddItem";
+import './index.css'
 
 const App = () => {
-    const users = [
-        { name: 'John', age: 25, status: true },
-        { name: 'Bob', age: 30, status: false },
-        { name: 'Tom', age: 20, status: true },
-        { name: 'Sam', age: 28, status: false },
-        { name: 'Ann', age: 24, status: true },
-    ]
 
     return (
-        <div>
+        <div className="app">
             <Header />
             <Search />
             <ToDoList />
-            <Users users={users}/>
+            <AddItem/>
         </div>
     )
 }

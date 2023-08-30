@@ -1,0 +1,30 @@
+.todo-list-item{
+    list-style: none;
+    padding: 5px 5px 5px 15px;
+    margin: 5px 0px 0px 0px;
+    border: 3px solid rgb(55, 55, 118);
+    width: 110px;
+}
+
+/* .todo-list-item button{
+    margin: 2px;
+} */
+
+.wrapper{
+    display: flex;
+
+}
+.wrapper button{
+    margin: 5px 5px 0px 5px;
+    padding: 6px;
+    background-color: rgb(55, 55, 118);
+    outline: none;
+    color: rgb(255, 255, 255);
+    border: none;
+}
+
+.wrapper button:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(55, 55, 118);
+    cursor: pointer;
+}
