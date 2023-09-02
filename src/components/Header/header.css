@@ -4,6 +4,12 @@
     border-radius: 5px 5px 0 0;
     text-align: center;
     text-transform: uppercase;
-    background-color: rgb(55, 55, 118);
+    background-color: #373776;
     color: #fff;
+}
+
+.info{
+    font-size: 12px;
+    text-transform: lowercase;
+    margin-left: 5px;
 }

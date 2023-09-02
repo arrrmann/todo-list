@@ -1,23 +1,28 @@
+.add-item{
+    padding: 10px 10px;
+
+}
+
 .add-item input{
-    margin: 5px;
+    padding: 10px;
     outline: none;
-    padding: 5px 5px 5px 15px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(55, 55, 118)
+    border: 1px solid #e5e5e5;
+    border-radius: 5px 0 0 5px;
+    width: 70%;
 }
 
 .add-item button{
-    padding: 6px;
-    background-color: rgb(55, 55, 118);
+    padding: 11px;
     outline: none;
-    margin-left: 15px;
-    color: rgb(255, 255, 255);
     border: none;
+    border-radius: 0 5px 5px 0;
+    width: 20%;
+    background-color: #373776;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .add-item button:hover{
-    background-color: rgb(255, 255, 255);
-    color: rgb(55, 55, 118);
-    cursor: pointer;
-    border: 1px solid rgb(55, 55, 118);
+    background-color: #1c1c5c;
 }
