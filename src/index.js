@@ -4,6 +4,7 @@ import Header from "./components/Header"
 import Search from "./components/Search"
 import ToDoList from "./components/ToDoList"
 import AddItem from "./components/AddItem";//aranc kampanyenti fayli anuny nshelov, avtomat man kga index.js anunov fayl
+import ErrorMessage from "./components/ErrorMessage";
 import './index.css'
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
     return (
         <div className="app">
             <Header done={5} important={2}/>
+            <ErrorMessage text="Not Found ToDo Item" error={true}/>
             <Search />
             <ToDoList items={items}/>
             <AddItem/>
