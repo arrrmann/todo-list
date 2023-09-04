@@ -9,7 +9,8 @@
 }
 
 .info{
+    display: inline-block;
     font-size: 12px;
     text-transform: lowercase;
-    margin-left: 5px;
+    margin-left: 15px;
 }
