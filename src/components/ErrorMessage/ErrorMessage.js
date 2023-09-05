@@ -3,30 +3,18 @@ import './error-message.css'
 
 
 export default class ErrorMessage extends Component{
-    state={
-        isError:this.props.error,
-        isInfo:this.props.info
-    }
-
-    // IfError()=>{
-    //     se
-    // }
 
     render(){
-        const {text}=this.props
-        const {isError, isInfo}=this.state
-        const styles={
-            color: isError ? 'red' : "black"
+        const {message, type}=this.props
+        const style={}
 
+        switch (type) {
+            case "error": style.backgroundColor = '#E99A9A'; break;
+            case "info": style.backgroundColor = '#6BD4F7'; break;
+            default: style.backgroundColor = '#eee'; break;
         }
 
-        return (
-            <div className="error-div">
-                <span className="error-span">
-                    {text}
-                </span>
-            </div>
-        )
+        return (<div className="message-alert" style={style}>{message}</div>)
     }
     
 }
