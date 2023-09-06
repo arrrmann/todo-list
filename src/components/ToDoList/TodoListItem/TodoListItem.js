@@ -20,6 +20,11 @@ class TodoListItem extends Component{
         })
     }
 
+    onDeleteBtn=()=>{
+        const {onRemoveBtn, identification}=this.props
+        onRemoveBtn(identification)
+    }
+
     render(){
         const {text,}=this.props
         const {isDone, importancy}=this.state
@@ -37,7 +42,7 @@ class TodoListItem extends Component{
             <span className='item-btns'>
                 <button className='item-btn-done' onClick={this.onDone}><FaCheck/></button>
                 <button className='item-btn-important'onClick={this.onImortant}><FaInfo/></button>
-                <button className='item-btn-remove'><FaTrash/></button>
+                <button className='item-btn-remove' onClick={this.onDeleteBtn}><FaTrash/></button>
             </span>
         </li>
         )

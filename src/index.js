@@ -19,10 +19,12 @@ class App extends Component {
     }
 
     onAddItem = (text) => {
+        
         const newItem = {
             text,
             important: false,
-            id: this.state.items[this.state.items.length - 1].id + 1//vercnum enq verjin item-y u stanum enq dra id-in u plyus mek enq anum
+            id: this.state.items.length > 0 ? this.state.items[this.state.items.length - 1].id + 1 : 1
+            // id: this.state.items[this.state.items.length - 1].id + 1//vercnum enq verjin item-y u stanum enq dra id-in u plyus mek enq anum
         }
 
         this.setState((prevState) => {//prevState-i mej e ynknum naxord vijakov state-y
@@ -32,12 +34,20 @@ class App extends Component {
         })
     }
 
+    onRemoveBtn=(identification)=>{
+        this.setState((prevState)=>{
+            return{
+                items: prevState.items.filter(item => item.id!==identification)
+            }
+        })
+    }
+
     render() {
         return (
             <div className="app">
                 <Header done={5} important={2} />
                 <Search />
-                <ToDoList items={this.state.items} />
+                <ToDoList items={this.state.items} onRemoveBtn={this.onRemoveBtn}/>
                 <AddItem onAddItem={this.onAddItem} />
             </div>
         )
