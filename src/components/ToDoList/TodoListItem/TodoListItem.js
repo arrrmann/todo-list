@@ -21,7 +21,8 @@ class TodoListItem extends Component{
     }
 
     onDeleteBtn=()=>{
-        const {onRemoveBtn, identification}=this.props
+        const {onRemoveBtn, identification  }=this.props
+        //onRemoveBtn(key)
         onRemoveBtn(identification)
     }
 
