@@ -5,10 +5,10 @@ import './todo-list.css'
 
 class ToDoList extends Component{
     render(){
-        const {items, onRemoveBtn}=this.props
+        const {items, deleteItem, editItem}=this.props
 
-        const data=items.map(({text, important, id})=>{
-            return (<TodoListItem text={text} important={important} key={id} identification={id} onRemoveBtn={onRemoveBtn}/>)
+        const data=items.map(({text, important, id},index)=>{
+            return (<TodoListItem text={text} important={important} key={id} identification={id} deleteItem={deleteItem} editItem={(newTextValue)=>{editItem(index, newTextValue)}}/>)
         })
 
         return (

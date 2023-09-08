@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from "react";//karox enq irar hetevic tvarkelov, import anel, kam destrukturizacnel---React-y export e arvac default, isk mnacacy export en arvac object-i tesqov
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header"
 import Search from "./components/Search"
@@ -34,12 +34,31 @@ class App extends Component {
         })
     }
 
-    onRemoveBtn=(identification)=>{
-        this.setState((prevState)=>{
-            return{
-                items: prevState.items.filter(item => item.id!==identification)
+    editItem=(itemIndex, newTextValue)=>{
+        const updatedItems=[...this.state.items]
+
+        updatedItems[itemIndex].text=newTextValue
+        this.setState({items:updatedItems})
+    }
+
+    deleteItem=(identification)=>{
+        this.setState(({items})=>{
+            const idx=items.findIndex((item) => item.id===identification )
+
+            return {
+                items:[
+                    ...items.slice(0, idx),//skzbnaket: 0 index, verjnaket: idx (chi mtnum array-i mej, minchev et)
+                    ...items.slice(idx + 1)//skzbnaket: idx+1 e u nor array-i mej mtnum e
+                ]
             }
         })
+
+
+        // this.setState((prevState)=>{
+        //     return{
+        //         items: prevState.items.filter(item => item.id!==identification)
+        //     }
+        // })
     }
 
     render() {
@@ -47,7 +66,11 @@ class App extends Component {
             <div className="app">
                 <Header done={5} important={2} />
                 <Search />
-                <ToDoList items={this.state.items} onRemoveBtn={this.onRemoveBtn}/>
+                <ToDoList 
+                    items={this.state.items}
+                    deleteItem={this.deleteItem} 
+                    editItem={this.editItem}
+                />
                 <AddItem onAddItem={this.onAddItem} />
             </div>
         )
