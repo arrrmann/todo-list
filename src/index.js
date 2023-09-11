@@ -18,6 +18,10 @@ class App extends Component {
         ]
     }
 
+    handleSearch=(text)=>{
+        
+    }
+
     onAddItem = (text) => {
         
         const newItem = {

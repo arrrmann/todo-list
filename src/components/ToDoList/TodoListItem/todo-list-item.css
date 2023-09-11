@@ -45,17 +45,18 @@
     cursor: pointer;
 }
 
-.input-for-save{
-    padding: 5px;
+.input-for-edit{
+    padding: 4px;
     border: 1px solid #d7d7d7;
     outline: none;
     border-radius: 5px 0 0 5px;
     width: 170px;
-    margin-top: -5px;
+    margin-top: -3px;
+    font-size: 12px;
 }
 
-.btn-for-save{
-    padding: 6px 15px;
+.btn-for-edit{
+    padding: 4px 15px;
     outline: none;
     border: 0;
     cursor: pointer;
@@ -63,8 +64,17 @@
     color: #fff;
     background-color: #3c3f79;
     transition: all 0.3s ease;
-    margin-top: -5px;
+    margin-top: -3px;
 }
-.btn-for-save:hover{
+.btn-for-edit:hover{
     background-color: #1c1c5c;
+}
+
+.error-message{
+    font-size: 10px;
+    position: absolute;
+    color: red;
+    top: 170px;
+    left:420px
+
 }
